@@ -1,9 +1,12 @@
-import Image from "next/image";
+import { TodoProvider } from "@/components/todos/TodoContext";
+import TodoWrapper from "@/components/todos/TodoWrapper";
 
 export default function Home() {
   return (
     <main>
-      <h1>Hello to Todo App</h1>
+      <TodoProvider>
+        <TodoWrapper />
+      </TodoProvider>
     </main>
   );
 }
